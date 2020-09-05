@@ -1,0 +1,48 @@
+marker#child {
+  fill: red;
+}
+
+body {font-family: "Source Code Pro", Consolas, monaco, monospace; line-height: 160%; font-size: 16px;  margin: 0; }
+
+/* g.node circle { */
+  /* stroke: #fff; */
+  /* stroke-width: 1.5px; */
+  /* stroke: #ADD8E6; */
+  /* stroke: #ffffff; */
+  /* stroke-width: 1px; */
+  /* opacity: 0.5; */
+/* } */
+
+g.node.selected circle {
+  /* fill: red; */
+  opacity: 1;
+  stroke-width: 1px;
+}
+
+g.node.selected_target circle {
+  fill: pink;
+  /* stroke-width: 1.5px; */
+}
+
+g.node text, g.node a {
+  pointer-events: none;
+  /* font: 15px Courier New; */
+  font: 12px cursive;
+  font-style: italic;
+}
+
+line.link {
+  stroke: #999;
+  /* stroke-opacity: .8; */
+  stroke-opacity:0.8;
+  /* stroke-width: 3px; */
+}
+
+line.selected {
+  /* stroke: red; */
+  stroke-opacity: 1;
+}
+
+rect {
+ fill: white;
+}
