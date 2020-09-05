@@ -21,7 +21,7 @@ function computeSug () {
 	
 	// var map = new Map();
 	for (var i=0; i<parsedArray.length; i++) {
-		var addressConcept = 'http://api.conceptnet.io/c/en/'+ parsedArray[i].name.toLowerCase() +'?offset=0&limit=1000';
+		var addressConcept = 'https://api.conceptnet.io/c/en/'+ parsedArray[i].name.toLowerCase() +'?offset=0&limit=1000';
 		var json = JSON.parse(httpGet(addressConcept));
 		parseAll(json,parsedArray[i]);
 		console.log("Address Concept: "+　addressConcept)
@@ -635,7 +635,7 @@ function getSug(d) {
 	// console.log(parsedArray)
 	
 	for (var i=0; i<parsedArray.length; i++) {
-		var addressConcept = 'http://api.conceptnet.io/c/en/'+ parsedArray[i].name.toLowerCase() +'?offset=0&limit=1000';
+		var addressConcept = 'https://api.conceptnet.io/c/en/'+ parsedArray[i].name.toLowerCase() +'?offset=0&limit=1000';
 		var json = JSON.parse(httpGet(addressConcept));
 		var sug = parseAllFilter(json,parsedArray[i]);
 		console.log("Address Concept: "+　addressConcept)
