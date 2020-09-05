@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="text/javascript" src="http://d3js.org/d3.v4.min.js"></script>
+	<script type="text/javascript" src="js/d3-ellipse-force.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
+	<script>
+	  // Initialize Firebase
+	  var config = {
+		apiKey: "AIzaSyBOIqx5jJ-TigieOGhSwdS3TG9IG-5fPw4",
+		authDomain: "qmap-c51d8.firebaseapp.com",
+		databaseURL: "https://qmap-c51d8.firebaseio.com",
+		projectId: "qmap-c51d8",
+		storageBucket: "qmap-c51d8.appspot.com",
+		messagingSenderId: "315415147471"
+	  };
+	  firebase.initializeApp(config);
+	</script>
+	<script type="text/javascript">
+        var timerStart = Date.now();
+		console.log(timerStart)
+    </script>
+    <link type="text/css" rel="stylesheet" href="css/force.css"/>
+	<link type="text/css" rel="stylesheet" href="css/index.css"/>
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" />
+  </head>
+
+  <!-- <header id="tools" width="960"s height="100"> -->
+  <!-- <button type="button" id="color" onclick="ColorNode()">color</button> -->
+  <!-- <input type="color" id="ColorPicker" tabindex=-1 class="hidden"> -->
+  <!-- <button type="button" id="sugStop" onclick="sugStop()">computer stop!</button> -->
+  <!-- <p>Explore Wider :</p> -->
+  <!-- <div class="slidecontainer"> -->
+  <!-- <p>Explore Wider</p> -->
+  <!-- <input type="range" min="1" max="9" value="6" class="slider" id="timeRange"> -->
+  <!-- </div> -->
+  <!-- <p>Explore Deeper :</p> -->
+  <!-- <div class="slidecontainer"> -->
+  <!-- <p>Explore Deeper</p> -->
+  <!-- <input type="range" min="1" max="9" value="6" class="slider" id="lineageRange"> -->
+  <!-- </div> -->
+  
+  <!-- <input type="range" min="1" max="9" value="6" class="slider" id="timeRange"> -->
+  <!-- <button type="button" id="changeSug" onclick="changeSug()">changeSug</button> -->
+  <!-- Click to add nodes, drag to create link between two nodes, shift-drag to move nodes around, select-delete to remove node -->
+  <!-- </header>  -->
+
+  <!-- <body>    -->
+	<div class="topnav">
+		<a href="#" id="sug1" onclick="linkSug(this.id)">.</a>
+		<a href="#" id="sug2" onclick="linkSug(this.id)">.</a>
+		<a href="#" id="sug3" onclick="linkSug(this.id)">.</a>
+		<a href="#" id="sug4" onclick="linkSug(this.id)">.</a>
+		<a href="#" id="sug5" onclick="linkSug(this.id)">.</a>
+		<a href="#" id="sug6" onclick="linkSug(this.id)">.</a>
+		<a href="#" id="sug7" onclick="linkSug(this.id)">.</a>
+		<a href="#" id="sug8" onclick="linkSug(this.id)">.</a>
+		<a href="#" id="sug9" onclick="linkSug(this.id)">.</a>
+		<a href="#" id="sug10" onclick="linkSug(this.id)">.</a>
+	</div>
+	<!-- <svg id="chart" width="1220" height="500"></svg> -->
+	<div id="chart" width="1220" height="500"></div>
+	<!-- <section id="helpBar"></section> -->
+	<footer>
+	  <div class="slidecontainer">
+	  <img src="wide.PNG" alt="explore wider" width="103" height="55" style="padding: 4px 50px 0px 50px;">
+	  <!-- <p>&nbsp; &nbsp; &#9755; Explore Wider</p> -->
+	  <input type="range" min="1" max="9" value="6" class="slider" id="timeRange">
+	  </div>
+	  <div class="slidecontainer">
+	  <img src="deep.PNG" alt="explore deeper" width="103" height="55" style="padding: 4px 50px 0px 50px;">
+	  <!-- <p>&nbsp; &#9755; Explore Deeper</p> -->
+	  <input type="range" min="1" max="10" value="6" class="slider" id="lineageRange">
+	  </div>
+	  <!-- <div class="slidecontainer"> -->
+	  <!-- <code>Mixed Initiative Design Lab &#x2661; Texas A &#38; M University</code> -->
+	  <!-- </div> -->
+	  <div class="logo">
+	  <!-- <button type="button" id="convertLink" onclick="convertL()">color</button> -->
+	  <button type="button" id="save">SAVE</button>
+	  <p>Mixed Initiative Design Lab &#x2661; Texas A &#38; M University</p>
+	  </div>
+	</footer>
+	<div id="newConcept">
+		<p id="topic">Please enter new idea: </p>
+			<input id="ideaInput" type="text" />
+	</div>
+	<div id="dialog">
+		<p id="sentence">Please answer the following question: </p>
+			<input id="userInput" type="text" />
+	</div>
+	
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+	<!-- <script type='text/javascript' src='JavaScriptSpellCheck/include.js' ></script> -->
+	<!-- <script type='text/javascript'>$Spelling.SpellCheckAsYouType('all')</script> -->
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+	<!-- <script type="text/javascript" src="js/d3-context-menu.js"></script> -->
+	<script type="text/javascript" src="js/conceptNet_st.js"></script>
+    <script type="text/javascript" src="js/forceV_v4_textwrap.js"></script>
+	<!-- <script type="text/javascript" src="js/conceptNet_2.js"></script> -->
+	<!-- <script type="text/javascript" src="js/conceptNet_st.js"></script> -->
+
+  <!-- </body> -->
+</html>
